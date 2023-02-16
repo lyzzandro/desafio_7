@@ -117,7 +117,11 @@ header {
     position: absolute;
 }
 main {
+    display: flex;
+    flex-direction: column;
     margin: 100px 112px;
+    padding-bottom: 100px;
+    gap: 40px;
 }
 
 .header-main {
@@ -144,6 +148,7 @@ main {
     padding: 8px;
 }
 
+/*Buttons header-main*/
 .btn-enabled,
 .btn-disabled {
     font-weight: 700;
@@ -173,4 +178,39 @@ main {
 .btn-disabled:hover {
     background: var(--white-tertiary);
     color: var(--blue);
+}
+
+/*Cards*/
+.content-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+}
+.card {
+    width: 384px;
+    background: var(--white-primary);
+    border: 1px solid var(--stroke-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.card > img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px 16px 16px;
+}
+
+.card > div > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
