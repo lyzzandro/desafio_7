@@ -21,7 +21,6 @@ body {
 }
 
 header {
-    position: absolute;
     width: 100%;
     background: var(--white-secondary);
     display: flex;
@@ -116,4 +115,62 @@ header {
     bottom: 0;
     right: 0;
     position: absolute;
+}
+main {
+    margin: 100px 112px;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main h2 {
+    font-size: 32px;
+    line-height: 140%;
+}
+
+.header-main > div {
+    border: 1px solid var(--stroke-white);
+    border-radius: 6px;
+}
+
+.header-main > div {
+    border: 1px solid var(--stroke-white);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.btn-enabled,
+.btn-disabled {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 24px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-enabled {
+    background: var(--blue);
+    color: var(--white-primary);
+}
+
+.btn-enabled:hover {
+    background: var(--blue-hover);
+}
+
+.btn-disabled {
+    background: transparent;
+    color: var(--blue);
+}
+
+.btn-disabled:hover {
+    background: var(--white-tertiary);
+    color: var(--blue);
 }
