@@ -17,7 +17,6 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    height: 900px;
 }
 
 header {
@@ -137,11 +136,6 @@ main {
 .header-main > div {
     border: 1px solid var(--stroke-white);
     border-radius: 6px;
-}
-
-.header-main > div {
-    border: 1px solid var(--stroke-white);
-    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,10 +179,11 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    justify-content: space-between;
+    justify-content: center;
 }
 .card {
     width: 384px;
+    max-width: 600px;
     background: var(--white-primary);
     border: 1px solid var(--stroke-white);
     border-radius: 10px;
@@ -213,4 +208,58 @@ main {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+@media (max-width: 750px) {
+    .content {
+        align-items: none;
+        padding: 0 10px;
+    }
+    .content h1 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 125%;
+    }
+    .content-text {
+        padding: 0 40px;
+    }
+    .content-busca {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content-busca button {
+        width: 100%;
+    }
+
+    .content-busca input,
+    .content-busca select {
+        width: 100%;
+    }
+
+    .card {
+        width: 300px;
+        background: var(--white-primary);
+        border: 1px solid var(--stroke-white);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex-grow: 1;
+    }
+
+    .header-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 10px;
+        padding-bottom: 60px;
+        align-items: center;
+    }
+    .header-main h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
 }
