@@ -5,9 +5,14 @@
 }
 
 :root {
+    --white-primary: #ffffff;
     --white-secondary: #f8f8ff;
+    --white-tertiary: #f4f4ff;
     --red: #e45858;
     --blue: #6246ea;
+    --blue-hover: #4225d4;
+    --gray: #7c7c8a;
+    --stroke-white: #eaeaea;
 }
 
 body {
@@ -16,8 +21,7 @@ body {
 }
 
 header {
-    position: relative;
-    height: 500px;
+    position: absolute;
     width: 100%;
     background: var(--white-secondary);
     display: flex;
@@ -30,10 +34,12 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 100px 0;
+    gap: 40px;
 }
 
-.content div {
-    padding: 0 200px;
+.content-text {
+    padding: 0 173px;
 }
 
 .content h1 {
@@ -53,10 +59,53 @@ header {
     color: var(--blue);
 }
 
+/*Content Busca*/
 .content-busca {
-    width: 990px;
+    background: var(--white-primary);
+    border: 1px solid var(--stroke-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 24px;
+    border-radius: 10px;
 }
 
+.content-busca input,
+.content-busca select {
+    width: 348px;
+    background: var(--white-tertiary);
+    border: none;
+    border-radius: 5px;
+    padding: 16px 14px;
+}
+
+.content-busca input::placeholder,
+.content-busca select {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.content-busca button {
+    background: var(--blue);
+    color: var(--white-primary);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.content-busca button:hover {
+    background: var(--blue-hover);
+}
+
+/*Imagens Header*/
 #img_01 {
     top: 0;
     left: 0;
