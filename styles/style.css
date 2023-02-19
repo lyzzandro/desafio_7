@@ -119,7 +119,6 @@ main {
     display: flex;
     flex-direction: column;
     margin: 100px 112px;
-    padding-bottom: 100px;
     gap: 40px;
 }
 
@@ -153,6 +152,7 @@ main {
     border: none;
     text-transform: uppercase;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .btn-enabled {
@@ -210,6 +210,13 @@ main {
     gap: 6px;
 }
 
+.map {
+    width: 100%;
+    height: 600px;
+    display: block;
+    border: none;
+}
+
 @media (max-width: 750px) {
     .content {
         align-items: none;
@@ -261,5 +268,13 @@ main {
     .header-main h2 {
         font-size: 28px;
         margin-bottom: 16px;
+    }
+
+    #img_01 {
+        width: 200px;
+    }
+
+    .map {
+        width: 100%;
     }
 }
