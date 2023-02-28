@@ -188,7 +188,7 @@ select {
     color: var(--gray-secondary);
 }
 
-form button {
+form button.btn {
     padding: 1.2rem 3.2rem;
 }
 
@@ -231,7 +231,7 @@ section.cards {
     padding: 1.6rem;
 }
 
-.card h3{
+.card h3 {
     color: var(--black);
 }
 
@@ -249,4 +249,65 @@ section.cards {
 .location i {
     color: var(--red);
     font-size: 2.4rem;
+}
+
+main {
+    padding-inline: 4rem;
+}
+
+/*Responsividades*/
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 50%;
+    }
+    header::before {
+        background-size: 30vw;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 870px) {
+    header .content {
+        padding: 4rem;
+    }
+
+    header form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 660px) {
+    section.cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    section.cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}
+
+/*Estilizando scrollbar*/
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--white-tertiary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 20px;
+    border: 3px solid var(--white-tertiary);
 }
